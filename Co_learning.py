@@ -7,7 +7,7 @@ import requests
 import json
 import re
 from tqdm import tqdm
-import SparkApi
+from utils import SparkApi
 import json
 import time
 
