@@ -33,13 +33,13 @@ We hope that this dataset (we create) can serve as a valuable resource for furth
 
 To utilize the APIs required for this project, you need to obtain the necessary API keys. Follow the instructions below to get started:
 
-### 1. Baidu API Key
+### 1. Baidu/ Llama API Key
 
    - **Step 1:** Visit the [Baidu AI Open Platform](https://ai.baidu.com/).
    - **Step 2:** Log in or sign up for a Baidu account.
    - **Step 3:** After logging in, navigate to the "Console" (控制台) to create a new application.
    - **Step 4:** Under "Application Management" (应用管理), select "Create Application" (创建应用).
-   - **Step 5:** Choose the services you need (such as NLP, OCR, etc.) and then you will be provided with an API Key and Secret Key.
+   - **Step 5:** Choose the services you need (such as NLP, OCR, etc.) and then you will be provided with an API Key and Secret Key. You can also get Llama key in this platform
 
    You can access the platform and start the process here: [Baidu AI Open Platform](https://ai.baidu.com/).
 
