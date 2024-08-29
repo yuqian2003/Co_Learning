@@ -1,0 +1,27 @@
+2024-05-07 20:11:43,023 - INFO - Original Data file: Code.csv
+2024-05-07 20:11:43,023 - INFO - New Data file: Llama2024_05_07 20_11_43.csv
+2024-05-07 20:11:57,041 - INFO - Iteration: 0, Final Code: def min_cost(cost, m, n):
+    rows = len(cost)
+    cols = len(cost[0]) if rows > 0 else 0
+
+    if m >= rows or n >= cols:
+        raise IndexError("Destination position is out of matrix bounds.")
+
+    dp = [[float('inf')] * cols for _ in range(rows)]
+
+    dp[0][0] = cost[0][0]
+
+    for i in range(1, rows):
+        dp[i][0] = dp[i - 1][0] + cost[i][0]
+
+    for j in range(1, cols):
+        dp[0][j] = dp[0][j - 1] + cost[0][j]
+
+    for i in range(1, rows):
+        for j in range(1, cols):
+            dp[i][j] = cost[i][j] + min(dp[i - 1][j], dp[i][j - 1])
+
+    return dp[m][n], Reward: 102.0, Errors Corrected: 1, Time: 13.988497972488403
+2024-05-07 20:12:25,690 - INFO - Iteration: 1, Final Code: def find_similar_elements(list1, list2):
+    similar_elements = set(list1) & set(list2)
+    return tuple(similar_elements), Reward: 99.16666666666667, Errors Corrected: 3, Time: 28.638618230819702

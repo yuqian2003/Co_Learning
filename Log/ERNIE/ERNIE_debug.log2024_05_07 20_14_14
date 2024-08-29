@@ -1,0 +1,31 @@
+2024-05-07 20:14:14,699 - INFO - Original Data file: Code.csv
+2024-05-07 20:14:14,700 - INFO - New Data file: ERNIE2024_05_07 20_14_14.csv
+2024-05-07 20:14:40,116 - INFO - Iteration: 0, Final Code: def min_cost(cost, m, n):
+    # Get the dimensions of the cost matrix
+    rows = len(cost)
+    cols = len(cost[0]) if rows > 0 else 0
+
+    # Check if the destination is within the matrix boundaries
+    if m >= rows or n >= cols:
+        raise IndexError("Destination position is out of matrix bounds.")
+
+    # Initialize the cost matrix to store the minimum costs
+    dp = [[float('inf')] * cols for _ in range(rows)]
+
+    # Set the cost of the starting position to 0
+    dp[0][0] = cost[0][0]
+
+    # Calculate the minimum costs for each position in the matrix
+    for i in range(rows):
+        for j in range(cols):
+            # Calculate the cost from the top position
+            if i > 0:
+                dp[i][j] = min(dp[i][j], dp[i - 1][j] + cost[i][j])
+
+            # Calculate the cost from the left position
+            if j > 0:
+                dp[i][j] = min(dp[i][j], dp[i][j - 1] + cost[i][j])
+
+    # The original code had an error where it was returning dp[m][n] instead of dp[m - 1][n - 1]
+    # Since the indices start from 0, we need to subtract 1 from m and n to get the correct position
+    return dp[m - 1][n - 1], Reward: 102.0, Errors Corrected: 1, Time: 25.386901140213013

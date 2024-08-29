@@ -1,0 +1,6 @@
+2024-05-07 21:18:19,942 - INFO - Original Data file: Code.csv
+2024-05-07 21:18:19,942 - INFO - New Data file: Spark2024_05_07 21_18_19.csv
+2024-05-07 21:18:25,119 - ERROR - error from callback <function on_error at 0x000002696466EDC0>: socket is already opened
+2024-05-07 21:18:30,132 - INFO - tearing down on exception socket is already opened
+2024-05-07 21:18:40,289 - ERROR - error from callback <function on_error at 0x000002696466EDC0>: socket is already opened
+2024-05-07 21:18:45,306 - INFO - tearing down on exception socket is already opened
