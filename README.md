@@ -79,7 +79,7 @@ If you use this code in your research, please cite the following paper:
   author={Jiapeng Yu, Yuqian Wu, Yajing Zhan, Wenhao Guo, Zhou Xu, Raymond Lee},
   journal={Frontiers in AI},
   year={2024},
-  url={https://github.com/yuqian2003/MAS4POI}
+  url={https://github.com/yuqian2003/Co_Learning}
 }
 ```
 # Acknowledgments:
