@@ -28,6 +28,16 @@ The system is designed to enhance code error correction by mimicking human debug
 
 ## Dataset
 We hope that this dataset (we create) can serve as a valuable resource for further research and development in the field of code error correction, enabling the creation of more robust and efficient automated programming tools. You can find our dataset in the [dataset folder](./Dataset/) which includes 702 error code samples used for evaluation.
+### Subset of the Dataset Samples
+
+| **Error Code**                        | **Test List**                                                             | **Challenge Test List**                                                   |
+|---------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| `def remove_Occ(string, character):`  | `[assert remove_Occ("hello","l") == "heo",`                              | `[assert remove_Occ("hellololl","l") == "heolol",`                        |
+|                                       | `assert remove_Occ("abcda","a") == "bcd",`                               | `assert remove_Occ("","l") == "",`                                        |
+|                                       | `assert remove_Occ("PHP","P") == "H"]`                                   | `assert remove_Occ("","l") == ""]`                                        |
+| `def is_woodall(number):`             | `[assert is_woodall(383) == True,`                                       | `[assert is_woodall(32212254719) == True,`                                |
+|                                       | `assert is_woodall(254) == False,`                                       | `assert is_woodall(32212254718) == False,`                                |
+|                                       | `assert is_woodall(200) == False]`                                       | `assert is_woodall(159) == True]`                                         |
 
 ## API Key Acquisition
 
@@ -65,6 +75,17 @@ cd Co_Learning
 ```bash
 python Co_learning.py
 ```
+## Main Results
+
+### Co-Learning with Different LLM Performance Comparison
+
+| **Method**                | **1 loop** | **2 loops** | **3 loops** | **4 loops** | **5 loops** | **Average running time (s)** | **Accuracy (%)** |
+|---------------------------|------------|-------------|-------------|-------------|-------------|-------------------------------|------------------|
+| Co-Learning (ERNIE 4.0)   | 337        | 60          | 31          | **29**      | 245         | 137.5                         | 65.09            |
+| Co-Learning (Llama 3-8b)  | 317        | 81          | 32          | 21          | 251         | 112.8                         | 64.24            |
+| Co-Learning (Spark V3)    | 319        | 48          | 14          | 4           | **317**     | 57.7                          | 54.84            |
+| Co-Learning (E-RL)        | 280        | **104**     | **65**      | 27          | 226         | 99.8                          | **67.80**        |
+
 
 ## Case Study
 ![Alt text](./images/example.png)
