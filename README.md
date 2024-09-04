@@ -95,12 +95,14 @@ python Co_learning.py
 If you use this code in your research, please cite the following paper:
 
 ```bibtex
-@article{colearning2024,
-  title={Co-Learning: Code Learning for Multi-Agent reinforcement Collaborative Framework with},
-  author={Jiapeng Yu, Yuqian Wu, Yajing Zhan, Wenhao Guo, Zhou Xu, Raymond Lee},
-  journal={Frontiers in AI},
-  year={2024},
-  url={https://github.com/yuqian2003/Co_Learning}
+@misc{yu2024colearningcodelearningmultiagent,
+      title={Co-Learning: Code Learning for Multi-Agent Reinforcement Collaborative Framework with Conversational Natural Language Interfaces}, 
+      author={Jiapeng Yu and Yuqian Wu and Yajing Zhan and Wenhao Guo and Zhou Xu and Raymond Lee},
+      year={2024},
+      eprint={2409.00985},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2409.00985}, 
 }
 ```
 # Acknowledgments:
