@@ -178,10 +178,10 @@ class CodeGenerationEnv:
 
     def run_test(self, generated_code, test_list, challenge_test_list):
         # 正则
-        #function_name_match = re.search(r'def (\w+)\(', generated_code)  # 先提取
+        #function_name_match = re.search(r'def (\w+)\(', generated_code)  
         #function_name = function_name_match.group(1)
         time.sleep(10)
-        function_name_match = re.search(r'def (\w+)\(', generated_code)  # 先提取
+        function_name_match = re.search(r'def (\w+)\(', generated_code)  
         if function_name_match:
             function_name = function_name_match.group(1)
         else:
@@ -190,7 +190,7 @@ class CodeGenerationEnv:
         test_passed = True
         error_assert = None
         value = 0
-        # 创建一个独立的命名空间来执行代码,防止exec污染全局变量
+        
         local_namespace = {}
         # print(function_name)
         try:
@@ -237,7 +237,7 @@ class CodeGenerationEnv:
                 ch1 = ch.replace("assert ", "")
                 ch1 = ch1.replace('\"', "'")
 
-                ############################################ ping jie
+                ############################################ 
                 ch_name1 = re.search(r'\((.*)\)', ch1)
                 #ch_name = ch_name1.group(1)
                 if ch_name1 and function_name_match:
@@ -262,7 +262,7 @@ class CodeGenerationEnv:
 
         return test_passed, value, error_assert
 
-    ###### 目前还是按照百度
+    
     def step(self, error_code, test_list, change_test_list):
         start_time = time.time()
         num = 0  # 用于记录run test的次数
@@ -331,11 +331,11 @@ if __name__ == "__main__":
             df.loc[i, "time"] = str(total_time)
             df.loc[i, "The number of errors corrected"] = str(num)
 
-        # 将对话历史记录到文件和日志
+        
             for entry in history:
                 f.write("{}: {}\n".format(entry["role"], entry["content"]))
 
-            # 记录日志信息
+            
             log_msg = "Iteration: {}, Final Code: {}, Reward: {}, Errors Corrected: {}, Time: {}".format(i,
                                                                                                      generated_code,
                                                                                                      reward,
