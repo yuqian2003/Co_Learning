@@ -54,7 +54,7 @@ class Ws_Param(object):
             "date": date,
             "host": self.host
         }
-        # 拼接鉴权参数，生成url
+        # Concatenate auth parameters to generate url
         url = self.Spark_url + '?' + urlencode(v)
         # print(url)
         
@@ -88,7 +88,7 @@ def on_message(ws, message):
     data = json.loads(message)
     code = data['header']['code']
     if code != 0:
-        print(f'请求错误: {code}, {data}')
+        print(f'Request error: {code}, {data}')
         ws.close()
     else:
         global sid
